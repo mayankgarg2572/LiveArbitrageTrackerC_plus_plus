@@ -1,0 +1,10 @@
+[
+  { "exchange": "Binance", "base": "BTC", "quote": "USDT",
+    "bid": 29260.71, "ask": 29261.20, "ts": "2025-07-31T10:15:00Z" },
+
+  { "exchange": "Binance", "base": "ETH", "quote": "BTC",
+    "bid": 0.05500, "ask": 0.05502, "ts": "2025-07-31T10:15:00Z" },
+
+  { "exchange": "Binance", "base": "USDT", "quote": "ETH",
+    "bid": 18.16,  "ask": 18.17,  "ts": "2025-07-31T10:15:00Z" }
+]

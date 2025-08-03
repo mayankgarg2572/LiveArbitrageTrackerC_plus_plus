@@ -1,0 +1,47 @@
+I am using global environemtn MSYS2 UCRT64 as the project's environment.
+MINGW TYPE: MSYS2 UCRT64
+
+Some download commands
+pacman -S mingw-w64-ucrt-x86_64-nlohmann-json
+pacman -S --needed mingw-w64-ucrt-x86_64-toolchain cmake ninja
+
+Earlier
+./build/arb_demo.exe
+
+Project's 1st build commands:
+mkdir -p build 
+cd build
+cmake -G Ninja -DCMAKE_BUILD_TYPE=Release ..
+cmake --build .
+cd ..
+./build/arb_demo.exe
+
+
+cmake -G Ninja -DCMAKE_BUILD_TYPE=Release ..
+
+To Build the Project(first time/everytime you make some changes):
+cd /c/Users/HP/Desktop
+cd "Learn+Courses/cpp_projects/Arbitrage_Solver/build"
+cmake --build .
+cd ..
+./build/arb_live
+
+
+
+
+
+Similarly debug build setup:
+mkdir -p ../build-debug && cd ../build-debug
+cmake -G Ninja -DCMAKE_BUILD_TYPE=Debug ..
+cmake --build .
+gdb ./arb_demo
+
+
+Runn CMake buld in MSYS UCRT64:
+cd /c/Users/HP/Desktop
+cd "Learn+Courses/cpp_projects/Arbitrage_Solver"
+
+
+
+New Build setup commands:
+cmake -G Ninja -DOPENSSL_ROOT_DIR=/ucrt64 -DOPENSSL_INCLUDE_DIR=/ucrt64/include -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=/ucrt64 ..

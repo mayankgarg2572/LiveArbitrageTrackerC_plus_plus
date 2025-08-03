@@ -1,0 +1,48 @@
+ctrl+shift+b => To debug or to compile a file
+F5 => to launch the debugger with all DLLs found automatically
+
+Some download commands
+pacman -S mingw-w64-ucrt-x86_64-nlohmann-json
+pacman -S --needed mingw-w64-ucrt-x86_64-toolchain cmake ninja
+
+MYSY2 UCRT64 commands:
+HP@DESKTOP-U9QUNE5 UCRT64 ~
+$ cd /c/Users/HP/Desktop
+
+HP@DESKTOP-U9QUNE5 UCRT64 /c/Users/HP/Desktop
+$ cd "Learn+Courses/cpp_projects/Arbitrage_Solver"
+
+HP@DESKTOP-U9QUNE5 UCRT64 /c/Users/HP/Desktop/Learn+Courses/cpp_projects/Arbitrage_Solver
+$ g++ -std=c++17 -g sample.cpp -o sample.exe -lcurl
+
+HP@DESKTOP-U9QUNE5 UCRT64 /c/Users/HP/Desktop/Learn+Courses/cpp_projects/Arbitrage_Solver
+$ ./sample.exe
+
+
+cd:
+HP@DESKTOP-U9QUNE5 UCRT64 ~
+$cd /c/Users/HP/Desktop
+
+HP@DESKTOP-U9QUNE5 UCRT64 /c/Users/HP/Desktop
+$ cd "Learn+Courses/cpp_projects/Arbitrage_Solver/build"
+
+
+New Build:
+HP@DESKTOP-U9QUNE5 UCRT64 /c/Users/HP/Desktop/Learn+Courses/cpp_projects/Arbitrage_Solver/build
+$ cmake --build . -j
+
+
+New Run:
+../build/arb_live.exe
+
+
+Ninja Build:
+HP@DESKTOP-U9QUNE5 UCRT64 /c/Users/HP/Desktop/Learn+Courses/cpp_projects/Arbitrage_Solver/build
+$ cmake -G Ninja \
+      -DCMAKE_BUILD_TYPE=Release \
+      -DCMAKE_NO_SYSTEM_FROM_IMPORTED=ON \
+      -DOPENSSL_ROOT_DIR=/ucrt64 \
+      -DOPENSSL_INCLUDE_DIR=/ucrt64/include \
+      -DCMAKE_PREFIX_PATH=/ucrt64 \
+      ..
+
