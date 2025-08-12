@@ -35,5 +35,5 @@ private:
     std::atomic<bool> stop_{false};
     std::uint64_t nextExpected_{0}; // prev ‘u’ + 1
     std::thread th_;
-    bool                synced_{false};    // ← new: true after first good event
+    bool synced_{false};    //  true after first good event
 };

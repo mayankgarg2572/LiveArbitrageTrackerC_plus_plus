@@ -79,7 +79,8 @@ int main(int argc,char* argv[])
         // std::cout<<tick<<":"<<'\n';
         std::string sym; double bid, ask;
         if(!q.pop(sym, bid, ask)){
-            std::cout<<ign++<<" ";
+            if(++ign % 50 == 0) std::cout << "\n\nAfter " << ign
+                << " empty pops, waiting for data...\n";
             std::this_thread::sleep_for(std::chrono::milliseconds(10));
             continue;
         }
